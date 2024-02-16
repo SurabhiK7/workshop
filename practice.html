@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            const isLeapyear=year=>{
+                if(year%4!==0&&year%100===0||year%400!==0){
+                    return false;
+                }
+                return true;
+                }
+            const year1=2000;
+            const year2=2004;
+            const year3=2006;
+            const year4=2100;
+            alert(`${year1}:${isLeapyear(year1)?'Leap Year':'Non Leap Year'}`)
+            alert(`${year2}:${isLeapyear(year2)?'Leap Year':'Non Leap Year'}`)
+            alert(`${year3}:${isLeapyear(year3)?'Leap Year':'Non Leap Year'}`)
+            alert(`${year4}:${isLeapyear(year4)?'Leap Year':'Non Leap Year'}`)
+        </script>
+    </body>
+</html>
