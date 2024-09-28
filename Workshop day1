@@ -1,0 +1,348 @@
+1] 
+import numpy as np  # Import the NumPy library
+
+# Create a 5x5 identity matrix with the diagonal shifted down by 2 positions
+t = np.eye(5, k=-2)
+
+# Print the resulting matrix
+print(t)
+
+2]
+import numpy as np  # Import the NumPy library
+
+# Define two lists
+l1 = [1, 2, 3]  # First list
+l2 = [4, 5, 6]  # Second list
+
+# Stack the two lists into a 2D array (matrix)
+ff = np.stack((l1, l2))
+
+# The resulting array 'ff' now contains both lists as rows
+print(ff)  # Print the stacked array
+
+3]
+import numpy as np  # Import the NumPy library
+
+# Define two lists
+l1 = [1, 2, 3]  # First list
+l2 = [4, 5, 6]  # Second list
+
+# Horizontally stack the two lists into a single array
+ff = np.hstack((l1, l2))
+
+# The resulting array 'ff' now contains all elements from both lists in a single row
+print(ff)  # Print the horizontally stacked array
+
+3]
+import numpy as np  # Import the NumPy library
+
+# Define two lists
+l1 = [1, 2, 3]  # First list
+l2 = [4, 5, 6]  # Second list
+
+# Vertically stack the two lists into a 2D array (matrix)
+ff = np.vstack((l1, l2))
+
+# The resulting array 'ff' now contains the lists as rows
+print(ff)  # Print the vertically stacked array
+
+4]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the x and y axes
+x = [5, 2, 9, 4, 7]  # x-coordinates
+y = [10, 5, 8, 4, 2]  # y-coordinates
+
+# Create a line plot using the x and y data
+plt.plot(x, y)
+
+# Display the plot to the screen
+plt.show()
+
+5]import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the x and y axes
+x = [5, 2, 9, 4, 7]  # x-coordinates (categories or positions)
+y = [10, 5, 8, 4, 2]  # y-coordinates (heights of the bars)
+
+# Create a bar chart using the x and y data
+plt.bar(x, y)
+
+# Display the bar chart to the screen
+plt.show()
+
+6]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the pie charts
+x = [5, 2, 9, 4, 7]  # Data for the first pie chart
+y = [10, 5, 8, 4, 2]  # Data for the second pie chart
+
+# Create the first pie chart using data from list x
+plt.pie(x)
+plt.title("Pie Chart for x")  # Add a title for clarity
+plt.show()  # Display the first pie chart
+
+# Create the second pie chart using data from list y
+plt.pie(y)
+plt.title("Pie Chart for y")  # Add a title for clarity
+plt.show()  # Display the second pie chart
+
+7]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the horizontal bar chart
+x = [5, 2, 9, 4, 7]  # y-coordinates (bar positions)
+y = [10, 5, 8, 4, 2]  # x-coordinates (lengths of the bars)
+
+# Create a horizontal bar chart using the x and y data
+plt.barh(x, y)
+
+# Display the horizontal bar chart to the screen
+plt.title("Horizontal Bar Chart")  # Add a title for clarity
+plt.xlabel("Values")  # Label for the x-axis
+plt.ylabel("Categories")  # Label for the y-axis
+plt.show()  # Show the plot
+
+8]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+import numpy as np  # Import NumPy for array handling
+
+# Define the categories and their corresponding values
+x = np.array(["A", "B", "C", "D"])  # Categories for the horizontal bars
+y = np.array([3, 8, 1, 10])  # Values corresponding to each category
+
+# Create a horizontal bar chart using the x and y data
+plt.barh(x, y)
+
+# Add a title and labels for clarity
+plt.title("Horizontal Bar Chart")  # Title of the chart
+plt.xlabel("Values")  # Label for the x-axis
+plt.ylabel("Categories")  # Label for the y-axis
+
+# Display the horizontal bar chart to the screen
+plt.show()  # Show the plot
+
+9]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+import numpy as np  # Import NumPy for numerical operations
+import math  # Import math module for mathematical functions (not used here)
+
+# Generate an array of x values from 0 to 2π (approximately 6.28) with a step of 0.05
+x = np.arange(0, 3.14 * 2, 0.05)
+
+# Calculate the sine of each x value
+y = np.sin(x)
+
+# Create a line plot of the sine wave
+plt.plot(x, y)
+
+# Label the x-axis as "ANGLE"
+plt.xlabel("ANGLE")
+
+# Label the y-axis as "SINE"
+plt.ylabel("SINE")
+
+# Set the title of the plot to "SINE WAVE"
+plt.title("SINE WAVE")
+
+# Display the plot
+plt.show()  # Show the plot
+
+10]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the x and y axes
+x = [5, 2, 9, 4, 7]  # x-coordinates
+y = [10, 5, 8, 4, 2]  # y-coordinates
+
+# Create a scatter plot using '+' markers for the points
+plt.plot(x, y, '+')
+
+# Display the plot to the screen
+plt.title("Scatter Plot")  # Add a title for clarity
+plt.xlabel("X-axis")  # Label for the x-axis
+plt.ylabel("Y-axis")  # Label for the y-axis
+plt.show()  # Show the plot
+
+11]
+import numpy as np  # Import the NumPy library for numerical operations
+
+# Create a NumPy array containing values from 0 to 11 (12 is exclusive)
+a = np.arange(0, 12)
+
+# Print the resulting array
+print(a)  # Display the array
+
+12]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the x and y axes
+x = [5, 2, 9, 4, 7]  # x-coordinates
+y = [10, 5, 8, 4, 2]  # y-coordinates
+
+# Create a line plot with '+' markers in red color
+plt.plot(x, y, marker="+", color="red")
+
+# Enable the grid for better readability of the plot
+plt.grid(True)
+
+# Display the plot to the screen
+plt.title("Line Plot with Markers")  # Add a title for clarity
+plt.xlabel("X-axis")  # Label for the x-axis
+plt.ylabel("Y-axis")  # Label for the y-axis
+plt.show()  # Show the plot
+
+13]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the x and y axes
+x = [5, 2, 9, 4, 7]  # x-coordinates
+y = [10, 5, 8, 4, 2]  # y-coordinates
+
+# Create a line plot with circle markers and a dotted red line
+# 'o:r' specifies circle markers ('o'), a red color (':'), and a dotted line style
+plt.plot(x, y, 'o:r', linestyle='dotted')
+
+# Enable the grid for better readability of the plot
+plt.grid(True)
+
+# Display the plot to the screen
+plt.title("Dotted Line Plot with Circle Markers")  # Add a title for clarity
+plt.xlabel("X-axis")  # Label for the x-axis
+plt.ylabel("Y-axis")  # Label for the y-axis
+plt.show()  # Show the plot
+
+14]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data for the x and y axes
+x = [5, 2, 9, 4, 7]  # x-coordinates
+y = [10, 5, 8, 4, 2]  # y-coordinates
+
+# Create a line plot with circle markers, a dotted line style, and a line width of 15
+# 'o:r' specifies circle markers ('o') and a red dotted line (':')
+plt.plot(x, y, 'o:r', linestyle='dotted', linewidth=15)
+
+# Overlay another line plot with default y-values and a line width of 10
+plt.plot(x, linewidth=10)
+
+# Enable the grid for better readability of the plot
+plt.grid(True)
+
+# Display the plot to the screen
+plt.title("Dotted Line Plot with Circle Markers")  # Add a title for clarity
+plt.xlabel("X-axis")  # Label for the x-axis
+plt.ylabel("Y-axis")  # Label for the y-axis
+plt.show()  # Show the plot
+
+15]
+import numpy as np  # Import NumPy for numerical operations
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+
+# Define the data arrays
+x = np.array([1, 2, 3, 4, 5])  # First dataset
+y = np.array([2, 3, 4, 5, 6])  # Second dataset
+z = np.array([4, 5, 6, 7, 8])  # Third dataset
+v = np.array([0, 8, 6, 4, 2])  # Fourth dataset
+
+# Plot each dataset with increasing line widths
+plt.plot(x, linewidth=10, label='Dataset x')  # Plot x with line width of 10
+plt.plot(y, linewidth=20, label='Dataset y')  # Plot y with line width of 20
+plt.plot(z, linewidth=30, label='Dataset z')  # Plot z with line width of 30
+plt.plot(v, linewidth=40, label='Dataset v')  # Plot v with line width of 40
+
+# Enable the grid for better readability of the plot
+plt.grid(True)
+
+# Add a legend to identify each line
+plt.legend()
+
+# Display the plot to the screen
+plt.title("Line Plots with Different Widths")  # Add a title for clarity
+plt.xlabel("Index")  # Label for the x-axis
+plt.ylabel("Values")  # Label for the y-axis
+plt.show()  # Show the plot
+
+16]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+import numpy as np  # Import NumPy for numerical operations
+
+# Define the data for the pie chart
+y = np.array([35, 25, 25, 15])  # Values representing different segments of the pie chart
+
+# Create a pie chart using the data
+plt.pie(y)
+
+# Add a title for clarity (optional, but useful)
+plt.title("Pie Chart Example")  # Title for the pie chart
+
+# Display the pie chart to the screen
+plt.show()  # Show the plot
+
+17]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+import numpy as np  # Import NumPy for numerical operations
+
+# Define the data for the pie chart
+y = np.array([35, 25, 25, 15])  # Values representing different segments of the pie chart
+
+# Create a pie chart using the data
+plt.pie(y)
+
+# Add a title for clarity (optional, but useful)
+plt.title("Pie Chart Example")  # Title for the pie chart
+
+# Display the pie chart to the screen
+plt.show()  # Show the plot
+
+18]
+import matplotlib.pyplot as plt  # Import the matplotlib library for plotting
+import numpy as np  # Import NumPy for numerical operations
+
+# Define the first dataset for the scatter plot
+x1 = np.array([5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6])  # x-coordinates
+y1 = np.array([99, 86, 87, 88, 111, 86, 10, 87, 94, 78, 77, 85, 86])  # y-coordinates
+
+# Create a scatter plot for the first dataset with green markers
+plt.scatter(x1, y1, color='green', label='Dataset 1')
+
+# Define the second dataset for the scatter plot
+x2 = np.array([4, 5, 9, 3, 2, 7, 21, 12, 14, 1, 5, 7, 9])  # x-coordinates
+y2 = np.array([108, 99, 87, 108, 1, 86, 10, 87, 104, 75, 67, 80, 85])  # y-coordinates
+
+# Create a scatter plot for the second dataset with red markers
+plt.scatter(x2, y2, color='red', label='Dataset 2')
+
+# Add a title and labels for clarity
+plt.title("Scatter Plot of Two Datasets")  # Title of the plot
+plt.xlabel("X-axis")  # Label for the x-axis
+plt.ylabel("Y-axis")  # Label for the y-axis
+
+# Enable the legend to identify each dataset
+plt.legend()
+
+# Display the scatter plot to the screen
+plt.show()  # Show the plot
+
+19]
+import pandas as pd  # Import the pandas library for data manipulation and analysis
+
+# Load the CSV file into a DataFrame
+df = pd.read_csv("lab26.csv")  # Replace "lab26.csv" with the path to your CSV file
+
+# Display the first few rows of the DataFrame to understand its structure
+df.head()  # Shows the first 5 rows by default
+
+20]
+from sklearn.model_selection import train_test_split  # Import the function to split data into training and testing sets
+
+# Split the DataFrame into training and testing sets
+# df[['age']] is used as the feature set (independent variable)
+# df.bought_insurance is the target variable (dependent variable)
+# test_size=0.2 indicates that 20% of the data will be used for testing
+X_train, X_test, y_train, y_test = train_test_split(df[['age']], df.bought_insurance, test_size=0.2)
+
+# X_train now contains the training set for the feature 'age'
+X_train  # Display the training feature set
+
